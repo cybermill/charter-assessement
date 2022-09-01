@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+.App {
+    font-family: sans-serif;
+    text-align: center;
+}
+  
+th,
+td {
+border: 1px solid black;
+}
+
+table {
+width: 100%;
+text-align: center;
+}
+  
