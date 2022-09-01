@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PurchaseTable should match snapshot 1`] = `
+<DocumentFragment>
+  <section>
+    <header>
+      <h1 />
+      <h4>
+        Name: , ID: , Total Reward Points: 
+      </h4>
+    </header>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            id
+          </th>
+          <th>
+            customer ID
+          </th>
+          <th>
+            Customer Name
+          </th>
+          <th>
+            Purchase Price
+          </th>
+          <th>
+            Purchase Date
+          </th>
+          <th>
+            Reward Points
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </section>
+</DocumentFragment>
+`;

@@ -1,21 +1,14 @@
 import React from "react";
-import { convertMonthNumberToString } from "../utils/month.helper";
+import { convertMonthNumberToString } from "../../utils/monthHelper/month.helper";
 
-//refactor later
 //reward points/customer per purchase
-const calculateRewardPoints = (purchasePrice) => {
-  const differenceBtwOneHun = purchasePrice - 100;
-  const overOneHunLogic = (purchasePrice - 100) * 2;
-  const overFiftyLogic = (purchasePrice - 50 - differenceBtwOneHun) * 1;
-  const purchaseOverOneHun = overOneHunLogic + overFiftyLogic;
-  const purchaseOverFiftyButLessThanOneHun = (purchasePrice - 50) * 1;
-
-  if (purchasePrice >= 100) {
-    return purchaseOverOneHun;
-  } else if (purchasePrice >= 50 && purchasePrice <= 99) {
-    return purchaseOverFiftyButLessThanOneHun;
-  } else {
+export const calculateRewardPoints = (purchasePrice) => {
+  if (purchasePrice < 50) {
     return 0;
+  } else if (purchasePrice > 100) {
+    return (purchasePrice - 100) * 2 + 50;
+  } else {
+    return (purchasePrice - 50);
   }
 };
 
@@ -64,7 +57,7 @@ const PurchaseTable = ({
                 <td>{purchase.customerID}</td>
                 <td>{purchase.customerName}</td>
                 <td>{purchase.purchasePrice}</td>
-                <td>{purchase.purchaseDate}</td>
+                <td title={purchase.purchaseDate}>{purchase.purchaseDate}</td>
                 <td>{calculateRewardPoints(purchase.purchasePrice)}</td>
               </tr>
             );

@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { fetchPurchaseRecords } from "./api/purchase.api";
-import PurchaseTable from "./components/PurchaseTable";
+import PurchaseTable from "./components/PurchaseTable/PurchaseTable";
 import { useLoading } from "./hooks/useLoading";
 
 //how to group by months?
