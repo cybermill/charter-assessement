@@ -1,4 +1,11 @@
-import React from "react";
+import * as React from "react";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import { StyledTableCell } from "../StyledTableCell";
 import { convertMonthNumberToString } from "../../utils/monthHelper/month.helper";
 
 //reward points/customer per purchase
@@ -21,51 +28,51 @@ export const calculateTotalRewardPoints = (purchaseRecords) => {
   return totalPoints;
 };
 
-const PurchaseTable = ({
+export default function PurchaseTable({
   purchaseRecords,
   monthNum,
   customerID,
   customerName
-}) => {
-  // console.log("purchaseRecords", purchaseRecords);
+}) {
+  // console.log(purchaseRecords);
 
   return (
-    <section>
+    <TableContainer component={Paper}>
       <header>
         <h1>{convertMonthNumberToString(monthNum)}</h1>
-        <h4>
+        <h3>
           Name: {customerName}, ID: {customerID}, Total Reward Points:{" "}
           {calculateTotalRewardPoints(purchaseRecords)}
-        </h4>
+        </h3>
       </header>
-      <table>
-        <thead>
-          <tr>
-            <th>id</th>
-            <th>customer ID</th>
-            <th>Customer Name</th>
-            <th>Purchase Price</th>
-            <th>Purchase Date</th>
-            <th>Reward Points</th>
-          </tr>
-        </thead>
-        <tbody>
+      <Table sx={{ minWidth: 650, border: 2 }} aria-label="purchase-table">
+        <TableHead>
+          <TableRow>
+            <StyledTableCell>ID</StyledTableCell>
+            <StyledTableCell>customer ID</StyledTableCell>
+            <StyledTableCell>Customer Name</StyledTableCell>
+            <StyledTableCell>Purchase Price</StyledTableCell>
+            <StyledTableCell>Purchase Date</StyledTableCell>
+            <StyledTableCell>Reward Points</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
           {purchaseRecords?.map((purchase) => {
             return (
-              <tr key={purchase.id}>
-                <td>{purchase.id}</td>
-                <td>{purchase.customerID}</td>
-                <td>{purchase.customerName}</td>
-                <td>{purchase.purchasePrice}</td>
-                <td title={purchase.purchaseDate}>{purchase.purchaseDate}</td>
-                <td>{calculateRewardPoints(purchase.purchasePrice)}</td>
-              </tr>
+              <TableRow key={purchase.id}>
+                <StyledTableCell>{purchase.id}</StyledTableCell>
+                <StyledTableCell>{purchase.customerID}</StyledTableCell>
+                <StyledTableCell>{purchase.customerName}</StyledTableCell>
+                <StyledTableCell>{purchase.purchasePrice}</StyledTableCell>
+                <StyledTableCell title={purchase.purchaseDate}>{purchase.purchaseDate}</StyledTableCell>
+                <StyledTableCell>
+                  {calculateRewardPoints(purchase.purchasePrice)}
+                </StyledTableCell>
+              </TableRow>
             );
           })}
-        </tbody>
-      </table>
-    </section>
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
-};
-
-export default PurchaseTable;
+}

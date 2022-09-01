@@ -2,38 +2,67 @@
 
 exports[`PurchaseTable should match snapshot 1`] = `
 <DocumentFragment>
-  <section>
+  <div
+    class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiTableContainer-root css-11xur9t-MuiPaper-root-MuiTableContainer-root"
+  >
     <header>
       <h1 />
-      <h4>
+      <h3>
         Name: , ID: , Total Reward Points: 
-      </h4>
+      </h3>
     </header>
-    <table>
-      <thead>
-        <tr>
-          <th>
-            id
+    <table
+      aria-label="purchase-table"
+      class="MuiTable-root css-15kfspa-MuiTable-root"
+    >
+      <thead
+        class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+      >
+        <tr
+          class="MuiTableRow-root MuiTableRow-head css-1q1u3t4-MuiTableRow-root"
+        >
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-kg34gi-MuiTableCell-root"
+            scope="col"
+          >
+            ID
           </th>
-          <th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-kg34gi-MuiTableCell-root"
+            scope="col"
+          >
             customer ID
           </th>
-          <th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-kg34gi-MuiTableCell-root"
+            scope="col"
+          >
             Customer Name
           </th>
-          <th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-kg34gi-MuiTableCell-root"
+            scope="col"
+          >
             Purchase Price
           </th>
-          <th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-kg34gi-MuiTableCell-root"
+            scope="col"
+          >
             Purchase Date
           </th>
-          <th>
+          <th
+            class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-kg34gi-MuiTableCell-root"
+            scope="col"
+          >
             Reward Points
           </th>
         </tr>
       </thead>
-      <tbody />
+      <tbody
+        class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+      />
     </table>
-  </section>
+  </div>
 </DocumentFragment>
 `;
