@@ -11,7 +11,7 @@ Purchase Records is an assessment from Charter Communication that evaluates a ca
 ---
 A sample image of the working application:
 
-![Purchase Table](image/purcahseTable.png)
+![Purchase Table](image/purchaseTable.png)
 
 # Technologies Used
 ---
