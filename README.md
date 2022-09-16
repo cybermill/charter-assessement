@@ -1,27 +1,27 @@
 # Project Title
----
+
 **Purchase Records** 
 
 # About the Project 
----
+
 
 Purchase Records is an assessment from Charter Communication that evaluates a candidate’s ReactJS skill level by making an application that calculates reward points for customers based on the purchase price of each transaction. The candidate is responsible for choosing the data structure that fits the given problem and rendering the expected data onto the UI using a table. A list of purchase transactions is measured over three months, where the transactions are grouped by months and customers. 
 
 # Screenshot
----
+
 A sample image of the working application:
 
-![Purchase Table](image/purchaseTable.png)
+![Purchase Table](/src/image/purchaseTable.png)
 
 # Technologies Used
----
+
 
 **HTML, CSS, JavaScript, ReactJS and Material-UI**
 
 **Unit Testing: Jest and React Testing Library**
 
 # Installation 
----
+
 ### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
